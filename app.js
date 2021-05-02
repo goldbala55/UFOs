@@ -12,12 +12,11 @@ function buildTable(data) {
   // loop through the data array, appending new rows
   data.forEach((dataRow) => {
     let row = tbody.append("tr");
-    
+
     // loop though the fields in the dataRow and add to table cell
     Object.values(dataRow).forEach((val) => {
-        let cell = row.append("td");
-        cell.text(val);
-        }
-    );
+      let cell = row.append("td");
+      cell.text(val);
+    });
   });
 }
