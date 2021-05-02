@@ -20,3 +20,22 @@ function buildTable(data) {
     });
   });
 }
+
+// Use D3 to create interactive filtering by date
+function handleClick() {
+  let date = d3.select("#datetime").property("value");
+  let filteredData = tableData;
+
+  // filter data based on input date
+  if (date) {
+    filteredData = filteredData.filter((row) => row.datetime === date);
+  }
+
+  // now rebuild the table (note: if no date is supplied, the entire table is returned)
+  buildTable(filteredData);
+}
+// listen for the click
+d3.selectAll("#filter-btn").on("click", handleClick);
+
+//build the initial table to display - all data
+buildTable(tableData);
