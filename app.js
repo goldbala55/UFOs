@@ -4,8 +4,11 @@ const tableData = data;
 // Reference the HTML table using d3
 var tbody = d3.select("tbody");
 
+console.log("entering app.js");
+
 // write a function to build a table to hold the UFO data
 function buildTable(data) {
+  console.log("running buildTable");
   // clear the table of any prior data
   tbody.html("");
 
