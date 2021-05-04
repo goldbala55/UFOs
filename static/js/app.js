@@ -50,15 +50,20 @@ function updateFilters() {
 // filter the table when data is entered.
 function filterTable() {
   // 8. Set the filtered data to the tableData.
-  //let filteredData = tableData;
+  let filteredData = tableData;
 
   // 9. Loop through all of the filters and keep any data that
   // matches the filter values
   console.log("filter dis!");
-  for (const f in tableFilters) {
-    console.log("Key: " + f + " Value: " + tableFilters[f]);
+  for (const [k, v] of Object.entries(tableFilters)) {
+    //console.log("Key: " + `${k}` + " Value: " + `${v}`);
+    console.log("Key: " + k + " Value: " + v);
+
+    filteredData = filteredData.filter((row) => row[k] === v);
+    console.log(filteredData);
   }
   // 10. Finally, rebuild the table using the filtered data
+  buildTable(filteredData);
 }
 
 // listen for changes to any/all filters
