@@ -11,7 +11,7 @@ Let's start with a simple date filter.  Enter 1/11/2010 into the date box and hi
 ![Date Filter](https://github.com/goldbala55/UFOs/blob/main/static/images/Date_Filter_Results.png) 
 
 Now, enter a state, say FL (or fl), and the results are narrowed to sightings in Florida on Jan 11, 2010.
-![Date and State Filter](https://github.com/goldbala55/UFOs/blob/main/static/images/Date_Filter_Results.png) 
+![Date and State Filter](https://github.com/goldbala55/UFOs/blob/main/static/images/Date_n_State_Filter_Results.png) 
 
 If you need to clear the filters, just click on the UFO Sightings Banner at the top!
 
