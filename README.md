@@ -18,7 +18,8 @@ If you need to clear the filters, just click on the UFO Sightings Banner at the 
 While the page provides a wealth of information and is fast and easy to use, the data is static. The only way to update it is manually by editing the data.js file.  To help keep the data fresh I'd suggest:
 1. Scraping known web sites for updated / additional data (e.g., https://en.wikipedia.org/wiki/List_of_reported_UFO_sightings)
 2. Allowing users to enter their own sightings by using a simple web form.
-3. Finally, for ease of use, I'd suggest populating dropdowns for the filter boxes to display available options based on the data contents.
+
+    For ease of use, I'd suggest populating dropdowns for the filter boxes to display available options based on the data contents.
 ## Resources
 This website was built using:
 1. ES6 compliant javaScript, HTML 5, D3 4.11, and Bootstrap 4.0 CSS
