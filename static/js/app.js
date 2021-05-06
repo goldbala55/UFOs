@@ -28,13 +28,13 @@ var tableFilters = {};
 
 // get all the entered filters from the html page
 function updateFilters() {
-  console.log("in da updateFilters Funk");
+  // console.log("in da updateFilters Funk");
 
   // extract the value and id updated in the html filters
   let filterValue = d3.select(this).property("value").toLowerCase();
   let filterId = d3.select(this).property("id");
 
-  console.log(filterValue, filterId);
+  // console.log(filterValue, filterId);
 
   // add the pair to the table filter
   if (filterValue) {
@@ -49,20 +49,16 @@ function updateFilters() {
 
 // filter the table when data is entered.
 function filterTable() {
-  // 8. Set the filtered data to the tableData.
+  //Set the filtered data to the complete tableData.
   let filteredData = tableData;
 
-  // 9. Loop through all of the filters and keep any data that
-  // matches the filter values
-  console.log("filter dis!");
+  // loop through the filters array and select the desired data
+  //https://developer.mozilla.org
   for (const [k, v] of Object.entries(tableFilters)) {
     //console.log("Key: " + `${k}` + " Value: " + `${v}`);
-    console.log("Key: " + k + " Value: " + v);
-
     filteredData = filteredData.filter((row) => row[k] === v);
-    console.log(filteredData);
   }
-  // 10. Finally, rebuild the table using the filtered data
+  // Rebuild the table using the filtered data
   buildTable(filteredData);
 }
 
